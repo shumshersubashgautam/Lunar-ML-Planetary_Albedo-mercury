@@ -8,10 +8,10 @@ There is a lot of missing data on our Mercury surface datasets, especially aroun
 The data we do have was measured by MESSENGER from different distances, due the probe's highly elliptical orbit. This results in Mercury image maps with spatial resolution that varies depending on the coordinates of the pixel we're looking at.
 
 Here: We create an adaptive smoothing algorithm that applies 2D Gaussian convolutions based on real planetary distances (in kilometers) and not pixels. This allows us to go from the 2D map projections of the planets to the 3D spherical representation of them.
-We try this algorithm out on the Moon.
-We apply various ML methods to see how well we can predict the relationship between the albedo and the chemical composition of the lunar surface. The reason we apply all of these on the Moon and not directly on Mercury is because we have no missing information about the Lunar albedo and the corresponding element maps are of high quality. Essentialy, the Moon serves as a benchmark before we get to Mercury.
+I try this algorithm out on the Moon.
+I apply various ML methods to see how well we can predict the relationship between the albedo and the chemical composition of the lunar surface. The reason we apply all of these on the Moon and not directly on Mercury is because we have no missing information about the Lunar albedo and the corresponding element maps are of high quality. Essentialy, the Moon serves as a benchmark before we get to Mercury.
 As mentioned above, some of the data on Mercury is missing. We create "masks" based on these areas that have no data. Afterwards, we apply these masks to the lunar surface in order to simulate something we call "Mooncury" - a version of the lunar dataset where there is data missing in a pattern identical to the missing data on Mercury.
-We apply ML on Mooncury. Essentially we have simulated areas of no data on the moon and we're trying to "fill in the gaps" before we attempt the same thing on Mercury (where the data is actually missing).
-We create a latitude dependent smoothing algorithm which is an evolution of the adaptive smoothing algorithm and allows to apply Gaussian smoothing of different radii based on the latitude of the pixel.
-We apply ML on Mercury.
-Importing all of the necessary modules. My algorithms of choice for this notebook are XGBoost and polynomial regression. I chose XGBoost because it was the top performing model in the task. I also wanted to use a model that's not based on decision trees, so I went with poly.
+I apply ML on Mooncury. Essentially we have simulated areas of no data on the moon and we're trying to "fill in the gaps" before we attempt the same thing on Mercury (where the data is actually missing).
+I create a latitude dependent smoothing algorithm which is an evolution of the adaptive smoothing algorithm and allows to apply Gaussian smoothing of different radii based on the latitude of the pixel.
+I apply ML on Mercury.
+Importing all of the necessary modules. My algorithms of choice for this notebook are XGBoost and polynomial regression. I use XGBoost because it was the top performing model in the task. I also wants to use a model that's not based on decision trees, so I went with poly.
