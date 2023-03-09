@@ -14,4 +14,4 @@ As mentioned above, some of the data on Mercury is missing. We create "masks" ba
 We apply ML on Mooncury. Essentially we have simulated areas of no data on the moon and we're trying to "fill in the gaps" before we attempt the same thing on Mercury (where the data is actually missing).
 We create a latitude dependent smoothing algorithm which is an evolution of the adaptive smoothing algorithm and allows to apply Gaussian smoothing of different radii based on the latitude of the pixel.
 We apply ML on Mercury.
-Importing all of the necessary modules. My algorithms of choice for this notebook are XGBoost and polynomial regression. I chose XGBoost because it was the top performing model in my original proposal task. I also wanted to use a model that's not based on decision trees, so I went with poly.
+Importing all of the necessary modules. My algorithms of choice for this notebook are XGBoost and polynomial regression. I chose XGBoost because it was the top performing model in the task. I also wanted to use a model that's not based on decision trees, so I went with poly.
